@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sisodiya Healthcare Clinic - Home</title>
+    <title>Services - Sisodiya Healthcare Clinic</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="section-light">
     <!-- Header & Navigation -->
     <header class="header" id="header">
         <div class="container navbar">
@@ -30,76 +30,57 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-heart-pulse"></i> Premier Healthcare Facility</span>
-            <h1>Quality Healthcare You Can Trust</h1>
-            <p>Providing exceptional medical care with a compassionate approach. State-of-the-art facilities and expert professionals dedicated to your well-being.</p>
-            <div class="hero-btns">
-                <a href="appointment.html" class="btn btn-primary">Book Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
-                <a href="contact.html" class="btn btn-secondary">Contact Now</a>
-            </div>
+    <!-- Page Header -->
+    <div class="page-header" style="background: var(--white);">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive healthcare solutions tailored to your needs.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Intro Section -->
+    <!-- Services Grid -->
     <section class="section">
         <div class="container">
-            <div class="section-title">
-                <h2>Welcome to Sisodiya Clinic</h2>
-                <p>Your journey to better health starts here. We combine advanced medical technology with personalized care to deliver the best outcomes for our patients.</p>
-            </div>
-            <div class="grid-3" style="text-align: center; margin-bottom: 40px;">
-                <div style="padding: 20px;">
-                    <i class="fa-solid fa-user-doctor" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                    <h3 style="margin-bottom: 10px;">Expert Doctors</h3>
-                    <p style="color: var(--text-light);">Our team consists of highly qualified specialists with years of experience.</p>
-                </div>
-                <div style="padding: 20px;">
-                    <i class="fa-solid fa-truck-medical" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                    <h3 style="margin-bottom: 10px;">Emergency Care</h3>
-                    <p style="color: var(--text-light);">24/7 dedicated emergency response team ready to handle any critical situation.</p>
-                </div>
-                <div style="padding: 20px;">
-                    <i class="fa-solid fa-microscope" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                    <h3 style="margin-bottom: 10px;">Modern Lab</h3>
-                    <p style="color: var(--text-light);">State-of-the-art diagnostic facilities for quick and accurate results.</p>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <a href="about.html" class="btn btn-primary" style="background: transparent; color: var(--primary); border: 2px solid var(--primary); box-shadow: none;">Learn More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Services Preview -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Services</h2>
-                <p>Explore some of our core medical specialties designed to cater to your specific healthcare needs.</p>
-            </div>
             <div class="grid-3">
+                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
                     <h3>General Checkup</h3>
-                    <p>Routine medical examinations and preventive care.</p>
+                    <p>Routine medical examinations, health screenings, and comprehensive preventive care for adults and children.</p>
                 </div>
+                <!-- Service 2 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>Heart Care</h3>
-                    <p>Comprehensive cardiac evaluations and treatments.</p>
+                    <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                    <h3>Emergency Care</h3>
+                    <p>24/7 rapid response for critical health conditions with fully equipped emergency trauma rooms.</p>
                 </div>
+                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
                     <h3>Child Care</h3>
-                    <p>Specialized pediatric services for infants and children.</p>
+                    <p>Specialized pediatric services, vaccinations, and growth monitoring for infants and children.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Lab Tests</h3>
+                    <p>Advanced diagnostic pathology and microbiology services delivering quick and accurate medical reports.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Heart Care</h3>
+                    <p>Comprehensive cardiac evaluations, ECG, stress tests, and personalized cardiovascular disease management.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Dental Care</h3>
+                    <p>Complete oral health services including cleanings, fillings, extractions, and cosmetic dentistry.</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="appointment.html" class="btn btn-primary">Book a Service</a>
             </div>
         </div>
     </section>

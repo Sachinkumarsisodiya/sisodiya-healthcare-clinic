@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Sisodiya Healthcare Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="section-light">
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-notes-medical"></i>
+                <span>Sisodiya</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="appointment.html">Appointment</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header" style="background: var(--white);">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <p>Schedule your visit with our specialists. Quick, easy, and hassle-free.</p>
+        </div>
+    </div>
+
+    <!-- Appointment Section -->
+    <section class="section">
+        <div class="container">
+            <div class="appointment-wrapper grid-2">
+                <div class="appointment-image"></div>
+                <div class="appointment-form-container">
+                    <h2>Appointment Details</h2>
+                    <p>Please fill out the form below. We will confirm your booking via WhatsApp.</p>
+                    
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom: 8px; font-weight: 500; color: var(--text-dark);">Full Name <span style="color: red;">*</span></label>
+                            <input type="text" id="patientName" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom: 8px; font-weight: 500; color: var(--text-dark);">Phone Number <span style="color: red;">*</span></label>
+                            <input type="tel" id="patientPhone" class="form-control" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom: 8px; font-weight: 500; color: var(--text-dark);">Age <span style="color: red;">*</span></label>
+                            <input type="number" id="patientAge" class="form-control" placeholder="Enter your age" min="1" max="120" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom: 8px; font-weight: 500; color: var(--text-dark);">Service Required <span style="color: red;">*</span></label>
+                            <select id="patientService" class="form-control" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="General Checkup">General Checkup</option>
+                                <option value="Emergency Care">Emergency Care</option>
+                                <option value="Child Care">Child Care</option>
+                                <option value="Lab Tests">Lab Tests</option>
+                                <option value="Heart Care">Heart Care</option>
+                                <option value="Dental Care">Dental Care</option>
+                                <option value="Other">Other Consultations</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom: 8px; font-weight: 500; color: var(--text-dark);">Preferred Date <span style="color: red;">*</span></label>
+                            <input type="date" id="appointmentDate" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" style="padding: 16px; font-size: 1.1rem; margin-top: 10px;">
+                            <i class="fa-brands fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> Continue to WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fa-solid fa-notes-medical" style="color: var(--accent);"></i>
+                        <span>Sisodiya Clinic</span>
+                    </div>
+                    <p>Providing premium, compassionate healthcare services for you and your family. Your health is our top priority.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">General Checkup</a></li>
+                        <li><a href="services.html">Emergency Care</a></li>
+                        <li><a href="services.html">Child Care</a></li>
+                        <li><a href="services.html">Lab Tests</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Working Hours</h4>
+                    <ul style="color: #94A3B8;">
+                        <li style="display: flex; justify-content: space-between;"><span>Mon - Fri:</span> <span>9:00 AM - 8:00 PM</span></li>
+                        <li style="display: flex; justify-content: space-between;"><span>Saturday:</span> <span>9:00 AM - 4:00 PM</span></li>
+                        <li style="display: flex; justify-content: space-between; color: #ef4444;"><span>Sunday:</span> <span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisodiya Healthcare Clinic. All rights reserved. Designed for Quality Care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

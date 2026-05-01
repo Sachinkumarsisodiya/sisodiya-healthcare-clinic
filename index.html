@@ -36,10 +36,21 @@
             scroll-behavior: smooth;
         }
 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         body {
             background-color: #f8fafc;
             color: var(--dark-text);
             line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         a {
@@ -64,9 +75,9 @@
         }
 
         .container {
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 0 15px;
         }
 
         .navbar {
@@ -785,16 +796,50 @@
             font-size: 1rem;
         }
 
+        /* Helper Classes */
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .about-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .about-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+        .location-info {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
         /* Mobile Responsive */
         @media (max-width: 992px) {
             .split-layout, .split-layout.reverse {
                 flex-direction: column;
                 gap: 50px;
+                text-align: center;
+            }
+            .split-content {
+                width: 100%;
+            }
+            .split-image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
             .carousel-content {
                 left: 5%;
                 right: 5%;
                 padding: 30px;
+                text-align: center;
             }
             .hero {
                 flex-direction: column;
@@ -804,9 +849,21 @@
             .hero-content {
                 padding-right: 0;
                 margin-bottom: 60px;
+                width: 100%;
             }
             .hero-subtitle {
                 margin: 0 auto 40px;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .about-list {
+                align-items: center;
+            }
+            .location-info {
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
             }
             .testimonials-grid {
                 grid-template-columns: 1fr;
@@ -814,6 +871,16 @@
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 50px;
+                text-align: center;
+            }
+            .footer-links h4::after, .footer-contact h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .contact-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
         }
 
@@ -822,16 +889,30 @@
                 display: none;
             }
             .hero-title {
-                font-size: 3rem;
+                font-size: 2.5rem;
+            }
+            .hero-image img {
+                height: auto;
             }
             .form-grid {
                 grid-template-columns: 1fr;
             }
             .section {
-                padding: 80px 0;
+                padding: 60px 0;
             }
             .carousel-content h3 {
                 font-size: 1.8rem;
+            }
+            .glass-card {
+                padding: 30px 20px;
+            }
+            .timing-list li {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            .split-image img {
+                height: auto;
             }
         }
     </style>
@@ -867,13 +948,17 @@
                 <div class="hero-badge">Top Rated Clinic in Jaipur</div>
                 <h1 class="hero-title">Dr. Riya Sisodiya</h1>
                 <p class="hero-subtitle">Compassionate Care for a Healthier Tomorrow. Book your appointment today and take the first step towards better health.</p>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="hero-buttons">
                     <a href="#book" class="btn">Book Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
                     <a href="#treatments" class="btn btn-outline">Our Specialties</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Dr_rekha.png" alt="Dr. Riya Sisodiya">
+                <img 
+			  src="Dr_rekha.png" 
+			  alt="Dr. Riya Sisodiya" 
+			  loading="lazy"
+			  style="width:100%; max-width:400px; height:auto; border-radius:12px; object-fit:cover;">
             </div>
         </div>
     </section>
@@ -956,7 +1041,7 @@
     <section id="about" class="section">
         <div class="container split-layout">
             <div class="split-image" style="display: flex; align-items: center;">
-                <img src="Dr_rekha.png" alt="Doctor Consultation" style="width: 600px; height: auto; border-radius: 30px;">
+                <img src="Dr_rekha.png" alt="Doctor Consultation" style="width: 100%; max-width: 600px; height: auto; border-radius: 30px;">
             </div>
             <div class="split-content">
                 <p class="section-subtitle">Meet The Doctor</p>
@@ -964,10 +1049,10 @@
                 <div class="glass-card" style="padding: 40px; box-shadow: none; border: none; background: transparent;">
                     <p style="font-size: 1.15rem; color: var(--light-text); margin-bottom: 20px;">Dr. Riya Sisodiya is a highly qualified and experienced medical professional dedicated to providing holistic and patient-centered care. With years of clinical experience, she specializes in diagnosing and treating a wide range of medical conditions.</p>
                     <p style="font-size: 1.15rem; color: var(--light-text); margin-bottom: 30px;">Her approach is rooted in compassion, ensuring that every patient feels heard and supported throughout their healthcare journey.</p>
-                    <ul style="display: flex; flex-direction: column; gap: 15px;">
-                        <li style="display: flex; align-items: center; gap: 15px; font-weight: 500;"><i class="fa-solid fa-check-circle" style="color: var(--teal); font-size: 1.5rem;"></i> 10+ Years of Experience</li>
-                        <li style="display: flex; align-items: center; gap: 15px; font-weight: 500;"><i class="fa-solid fa-check-circle" style="color: var(--teal); font-size: 1.5rem;"></i> Certified Medical Professional</li>
-                        <li style="display: flex; align-items: center; gap: 15px; font-weight: 500;"><i class="fa-solid fa-check-circle" style="color: var(--teal); font-size: 1.5rem;"></i> Patient-Centric Care</li>
+                    <ul class="about-list">
+                        <li><i class="fa-solid fa-check-circle" style="color: var(--teal); font-size: 1.5rem;"></i> 10+ Years of Experience</li>
+                        <li><i class="fa-solid fa-check-circle" style="color: var(--teal); font-size: 1.5rem;"></i> Certified Medical Professional</li>
+                        <li><i class="fa-solid fa-check-circle" style="color: var(--teal); font-size: 1.5rem;"></i> Patient-Centric Care</li>
                     </ul>
                 </div>
             </div>
@@ -989,7 +1074,7 @@
                         <li><span>Saturday</span> <span>9:00 AM - 1:00 PM</span></li>
                         <li class="closed"><span>Sunday</span> <span>Closed</span></li>
                     </ul>
-                    <div style="margin-top: 30px; display: flex; align-items: center; gap: 20px;">
+                    <div class="location-info">
                         <i class="fa-solid fa-location-dot" style="font-size: 2rem; color: var(--teal);"></i>
                         <div>
                             <strong style="display: block; font-size: 1.1rem;">Location</strong>
